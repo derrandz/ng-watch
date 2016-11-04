@@ -25,7 +25,7 @@
                             throw 'ngWatch directive requires the use of on-change attribute!';
                         }
 
-                        scope.$ngWatch(function () {
+                        scope.$watch(function () {
                             return $parse(attrs.ngWatch, null, true)(scope);
                         }, function () {
                             $parse(attrs.onChange, null, true)(scope);
